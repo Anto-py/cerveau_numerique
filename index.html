@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mini-formation asynchrone sur la méthode Getting Things Done (GTD) de David Allen, adaptée au contexte numérique des enseignants. Par Antonin Bareau, 2026.">
+  <title>GTD — Mini-formation asynchrone</title>
+  <link rel="stylesheet" href="assets/palette.css?v=7">
+</head>
+<body>
+  <div class="page-frame">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <header class="hero">
+      <p class="eyebrow">Mini-formation asynchrone · 60 min</p>
+      <h1>Le cerveau numérique</h1>
+      <p class="subtitle">Ton cerveau est un processeur. Pas un entrepôt.</p>
+
+      <div class="progress-bar" aria-label="Progression globale">
+        <div class="progress-fill" data-progress-fill></div>
+      </div>
+      <p class="progress-label" data-progress-label>0 / 5 modules validés</p>
+    </header>
+
+    <!-- ============================================================
+         MAP DU PARCOURS
+         ============================================================ -->
+    <nav class="module-map" aria-label="Parcours des 5 modules">
+      <ol>
+        <li data-map="m01"><span class="dot"></span><span class="label">Capturer</span></li>
+        <li data-map="m02"><span class="dot"></span><span class="label">Clarifier</span></li>
+        <li data-map="m03"><span class="dot"></span><span class="label">Organiser</span></li>
+        <li data-map="m04"><span class="dot"></span><span class="label">Réviser</span></li>
+        <li data-map="m05"><span class="dot"></span><span class="label">Engager</span></li>
+      </ol>
+    </nav>
+
+    <!-- ============================================================
+         SECTION · INTRODUCTION
+         ============================================================ -->
+    <section class="section" id="intro" data-section="intro" data-state="unlocked">
+      <div class="section-header">
+        <span class="section-tag">Introduction</span>
+        <h2>Pourquoi un cerveau numérique, pourquoi toi</h2>
+      </div>
+
+      <div class="section-body">
+        <div class="presentation">
+          <p class="hook">Tu as probablement 47 onglets ouverts.</p>
+          <p>
+            Trois emails non traités depuis lundi. Une correction qui attend depuis jeudi.
+            Dans le couloir entre deux cours, une idée que tu vas oublier d'ici la sonnerie.
+            Bienvenue dans la tête d'un enseignant en 2026.
+          </p>
+          <p>
+            Si tu travailles beaucoup avec le numérique (emails, Teams, veille technologique, différents groupes,...),
+            je mets un billet de 5 euros sur le fait que, parfois, tu te sens fatigué, dépassé, désorganisé, proche du burn out!
+          </p>
+          <p>
+            Ce qui t'épuise, ce n'est pas d'avoir trop à faire. C'est de passer de l'énergie
+            à tout retenir en même temps. En 2001, David Allen a publié une méthode pour
+            confier ça à un système externe et libérer l'attention. Elle s'appelle
+            <strong>Getting Things Done</strong>. Elle tient toujours — et elle est faite
+            pour le numérique par design : pas d'outil imposé, juste des flux de décision.
+          </p>
+          <p>
+            C'est ma digestion personnelle de cette méthode que je vais te présenter ici. Une digestion qui s'est faite sur 
+            plusieures années de pratique quotidienne. Une digestion qui fait que ce n'est plus cette même méthode, mais un dérivé.
+            Je rends honneur à celui qui en est le point de départ mais je ne revendique pas appliquer sa méthode (Ça, c'est dit!)
+          </p>
+          <p>
+            Ce parcours t'amène en 5 modules à comprendre la méthode et à la tester sur
+            tes propres items. Un seul principe à tenir à chaque étape :
+            <strong>ton cerveau est fait pour avoir des idées, pas pour les stocker</strong>.
+          </p>
+        </div>
+
+        <details class="deeper">
+          <summary>Aller plus loin — Zeigarnik, Toffler, infobésité enseignante</summary>
+          <div class="deeper-body">
+            <p>
+              L'idée centrale de GTD n'est pas neuve. Bluma Zeigarnik l'avait documentée dès 1927 :
+              les tâches inachevées restent en boucle dans l'esprit — même quand on travaille sur
+              autre chose, même pendant le sommeil. Chaque item non capturé consomme de la
+              bande passante mentale, en silence, en permanence.C'est ce qui crée la fatigue!
+            </p>
+            <p>
+              Alvin Toffler avait trouvé le mot pour ça en 1970 : l'<em>infobésité</em>. Un flux
+              d'informations supérieur à la capacité de traitement. En 2026, ce n'est plus une
+              exception — c'est l'état de base. Mais pour un enseignant, le flux a une nature
+              particulière : multidirectionnel, non maîtrisé, impossible à planifier. Élèves,
+              parents, direction, collègues, formations, ressources — tout arrive en même temps,
+              sans hiérarchie claire, souvent pendant qu'on fait autre chose.
+            </p>
+            <p>
+              David Allen a conçu sa méthode <em>avant</em> les smartphones, avant Slack, avant
+              les 47 onglets permanents. Et c'est paradoxalement ce qui la rend plus pertinente
+              que jamais : il avait compris que le problème n'était pas la quantité d'informations,
+              mais l'absence d'un système auquel on peut <strong>faire confiance</strong>. Sans
+              cette confiance, le cerveau reprend tout en charge. Et s'épuise.
+            </p>
+            <p>
+              La méthode que je vais te montrer est <em>tool-agnostic</em> : elle définit des flux de décision, pas
+              des applications. Ta boîte mail devient ton inbox. Ton gestionnaire de tâches
+              devient ta liste de prochaines actions. Ton calendrier reste ton calendrier.
+              Pas besoin de tout réinventer — juste de comprendre comment articuler ce que
+              tu utilises déjà.
+            </p>
+          </div> 
+        </details>
+
+        <details class="deeper">
+          <summary>Aller plus loin - Ma méthodologie</summary>
+          <div class="deeper-body">
+            <p>Comment j'ai conçu cette micro formation?</p>
+            <p>D'abord, comme je te l'ai dit, j'ai pratiqué pendant des années avec différents outils numériques.
+              Je suis désormais dans une version stable depuis une bonne année. Mais y a-t-il quelquechose de définitivement stable
+              dans la vie? Probablement pas, sauf si c'est mort depuis assez longtemps...
+            </p>
+            <p>
+              Ensuite, je me suis retrouvé face à des collègues au bout du rouleau, épuisés par le numérique... car ils n' avaient pas
+              de méthode. Ils s'en remettaient à un organe biologique trop limité pour faire face à ce flux constant d'information. Cela
+              m'a donné envie de partager. 
+            </p>
+            <p>
+              J'ai pensé à différentes formes, avant d' arriver à la conclusion qu'il n'y avait pas besoin de 
+              quelque chose de très compliqué. Du texte avec plusieurs niveaux pour ceux qui veullent aller plus loin, des exercices d' application,
+              un exemple concret de transfert dans la réalité.
+            </p>
+            <p>
+              Je me suis reposé sur Claude.ai pour construire ce site et les exercices interactifs (Le vibe coding, nouvelle compétence enseignante...)
+              Claude a créé le squelette du texte, j'ai vérifié qu'il était bien fonctionnel et j'y ai ajouté la chair de l'expérience vivante
+            </p>
+          </div>
+        </details> 
+
+        <div class="ornament">❧ ✿ ❀</div>
+
+        <div class="section-footer">
+          <p style="margin:0; font-size:14px; color:var(--retro-teal); font-style:italic;">
+            Durée estimée : ~60 min au total · chaque module ~10 min
+          </p>
+          <button class="btn-pill" data-unlock-next="m01" data-completes-self="intro">
+            <span class="btn-label">Commencer</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Section verrouillée</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION · MODULE 01 — VIDER LE CERVEAU
+         ============================================================ -->
+    <section class="section" id="m01" data-section="m01" data-state="locked">
+      <div class="section-header">
+        <span class="section-tag">Module 01</span>
+        <h2>Capturer</h2>
+        <p class="module-sub">Vider la tête, pas la remplir ailleurs.</p>
+      </div>
+
+      <div class="section-body">
+        <div class="presentation">
+          <p class="hook">Tu penses à quelque chose entre deux cours. Tu te dis que tu vas t'en souvenir. Deux heures plus tard — plus rien,
+            juste le stress de sentir confusément que tu es passé à côté de quelque chose d'important...</p>
+          <p>
+            Ce n'est pas un problème de concentration. C'est un problème d'architecture.
+            Tant que l'item reste dans ta tête, ton cerveau le garde en mémoire active —
+            et paye pour ça, en continu, sans que tu t'en rendes compte. Il tente de retenir, et
+            ça le fatigue...
+          </p>
+          <p>
+            La réponse du cerveau numérique est radicale dans sa simplicité : <strong>un "vide cerveau"" unique</strong>.
+            Un seul endroit où tout atterrit — idée, demande, obligation, ressource à explorer.
+            Pas 12 listes éparpillées entre l'agenda, les mémos, les post-its et la mémoire.
+            Une seule. Le vide cerveau n'est pas une liste de tâches : c'est une zone de transit.
+            Elle <em>vide</em> la mémoire de travail, elle ne stocke pas. Le cerveau le sait et se détend.
+          </p>
+          <p>
+            Règle opérationnelle : <strong>la capture doit coûter moins de 5 secondes</strong>.
+            Sinon, tu ne le feras pas. Et ton cerveau le sait.Il s'agit donc d'avoir ce vide cerveau à portée de la main...
+          </p>
+          <p>
+            Et pour cela, quoi de mieux que le smartphone? (Même si tu pourrait aussi utiliser un calepin ou une tablette de cire...)
+          </p>
+          <p>
+            A toi de trouver ton vide cerveau: page Notion, document texte (facilement accessible), boite mail (Attention à ne pas tout mélanger), 
+            Google keep,logiciel de prise de note propre à ton smartphone,... L'important est que tu puisses capturer en moins de 5 secondes.
+          </p>
+        </div>
+
+        <details class="deeper">
+          <summary>Aller plus loin — Zeigarnik (1927) et la mémoire de travail</summary>
+          <div class="deeper-body">
+            <p>
+              Le mécanisme derrière ce vide cerveau est ancien. En 1927,
+              la psychologue Bluma Zeigarnik observe que les serveurs d'un café berlinois
+              se souviennent parfaitement des commandes non encore servies, mais oublient
+              presque immédiatement celles qu'ils ont livrées. Elle en tire un principe —
+              connu aujourd'hui comme l'<em>effet Zeigarnik</em> : les tâches inachevées
+              restent en boucle dans l'esprit jusqu'à leur résolution ou leur externalisation.
+            </p>
+            <p>
+              Appliqué à ton quotidien, ça donne : chaque item qui traîne dans ta tête est
+              un processus en arrière-plan. Il consomme des ressources cognitives que tu
+              ne vois pas mais qui ralentissent tout le reste. L'externalisation dans un
+              vide cerveau <em>de confiance</em> — le mot est important — libère ces ressources.
+            </p>
+            <p>
+              Pourquoi <em>de confiance</em> ? Parce que si tu captures dans un système
+              auquel tu ne fais pas confiance (un carnet que tu ne relis jamais, une note
+              vocale que tu ne ré-écoutes jamais), ton cerveau ne lâche pas l'item. Il sait
+              qu'il va devoir y revenir tout seul. Le vide cerveau doit être fiable, accessible en
+              permanence, et vidée régulièrement (on verra ça au module 04). Crois moi, ce vide cerveau 
+              couplé à cette confiance vont produire un effet que tu percevras immédiatement quand 
+              ton système sera en place.
+            </p>
+          </div>
+        </details>
+
+        <div class="inbox" data-inbox="m01">
+          <h3 class="quiz-title">Exercice — Vide cerveau simulé</h3>
+          <p class="quiz-intro">
+            Huit items viennent d'atterrir dans ta tête.
+            <strong>Sélectionne tous ceux à capturer</strong>,
+            puis valide.
+          </p>
+
+          <div class="inbox-grid">
+
+            <div class="inbox-card" data-should-capture="true">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« Corriger l'interrogation sur les fake news »</p>
+              <p class="inbox-card-feedback" hidden>Tâche concrète avec livrable attendu. Archétype du truc à capturer pour ne pas le re-penser 12 fois dans la journée.</p>
+            </div>
+
+            <div class="inbox-card" data-should-capture="false">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« Je suis stressé par la réunion de demain »</p>
+              <p class="inbox-card-feedback" hidden>Un état émotionnel n'est pas un item pour ton vide cerveau. Si ce stress cache une action (préparer un document, relire des notes), capture l'action — pas le feeling.</p>
+            </div>
+
+            <div class="inbox-card" data-should-capture="true">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« M'inscrire à la <a href="https://edu-lab.be/innovations/ai4edu/" target="_blank" rel="noopener">formation référant IA de l'Edulab</a> »</p>
+              <p class="inbox-card-feedback" hidden>Engagement futur avec date potentielle. Ton cerveau le garde en boucle jusqu'à externalisation — même quand tu dors.</p>
+            </div>
+
+            <div class="inbox-card" data-should-capture="true">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« Utiliser <a href="https://lesrochdur.com/kit-esprit-critique/" target="_blank" rel="noopener">le site des Rochdur</a> sur l'esprit critique »</p>
+              <p class="inbox-card-feedback" hidden>Le doute est le signe exact qu'il faut capturer. L'inbox n'accueille pas que des tâches — aussi les ressources et les intentions floues.</p>
+            </div>
+
+            <div class="inbox-card" data-should-capture="false">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« Le numéro de salle de la réunion est le B204 »</p>
+              <p class="inbox-card-feedback" hidden>Information factuelle sans action future. Le vide cerveau capture ce qui demande une décision ou un suivi — pas les faits que tu peux vérifier en 2 secondes si besoin.</p>
+            </div>
+
+            <div class="inbox-card" data-should-capture="true">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« Rendez-vous avec le chef pour le virage numérique »</p>
+              <p class="inbox-card-feedback" hidden>Engagement interpersonnel prioritaire. Ce que tu en feras (préparer, planifier) vient après — au module suivant.</p>
+            </div>
+
+            <div class="inbox-card" data-should-capture="true">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« Fouiller le site de la <a href="https://docs.forge.apps.education.fr/" target="_blank" rel="noopener">forge des communs numériques éducatifs</a> »</p>
+              <p class="inbox-card-feedback" hidden>Intention vague = candidat parfait pour le vide cerveau. Le flou tourne en boucle. On décidera plus tard ce qu'on en fait.</p>
+            </div>
+
+            <div class="inbox-card" data-should-capture="true">
+              <div class="inbox-card-header">
+                <span class="inbox-check">+</span>
+              </div>
+              <p class="inbox-card-text">« Contacter <a href="https://www.linkedin.com/in/benoitnaveau/" target="_blank" rel="noopener">Benoit Naveau</a> pour une formation Canva »</p>
+              <p class="inbox-card-feedback" hidden>Action simple — mais « simple » ne veut pas dire « qu'on n'oublie pas ». La capture systématique protège des petits trous qui deviennent de grosses embrouilles.</p>
+            </div>
+
+          </div><!-- /.inbox-grid -->
+
+          <div class="inbox-actions">
+            <button class="btn-pill inbox-validate">
+              <span class="btn-label">Valider ma sélection</span>
+              <span class="btn-icon">✓</span>
+            </button>
+          </div>
+
+        </div><!-- /.inbox -->
+
+        <div class="completion-banner" hidden>
+          <p class="banner-title">✅ Module Capturer validé</p>
+          <p class="banner-text">Tout méritait la capture — y compris (surtout) les flous et les vagues intentions.</p>
+          <button class="btn-pill" data-unlock-next="m02">
+            <span class="btn-label">Passer à Clarifier</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <button class="reset-btn retry-inbox" style="margin-left: 12px;">Refaire l'exercice</button>
+        </div>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Termine l'introduction pour débloquer</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION · MODULE 02 — CLARIFIER
+         ============================================================ -->
+    <section class="section" id="m02" data-section="m02" data-state="locked">
+      <div class="section-header">
+        <span class="section-tag">Module 02</span>
+        <h2>Clarifier</h2>
+        <p class="module-sub">Décider maintenant ce que tu refuses de décider plus tard.</p>
+      </div>
+
+      <div class="section-body">
+        <div class="presentation">
+          <p class="hook">Un vide cerveau plein qu'on ne trie jamais, c'est juste un déménagement du chaos...</p>
+          <p>
+            Capturer sans clarifier, c'est déplacer le problème — pas le résoudre. La clarification,
+            c'est l'étape qui transforme un item flou en décision nette. L'idéal c'est de clarifier ton vide cerveau une fois par jour
+            Après... La théorie est ce pays dans lequel tout se passe bien... Pas de culpabilité si tu n'y arrives pas toujours! 
+            Pour clarifier, tu peux utiliser un arbre de décision simple, invariant, et légèrement irritant parce qu'on ne peut pas tricher.
+          </p>
+          <p>
+            Pour chaque item de ton vide cerveau, une seule question d'abord : <strong>est-ce actionnable?</strong><br>
+            <strong>Non</strong> → poubelle, référence, ou « Un jour peut-être ». Fin.<br>
+            <strong>Oui</strong> → faisable en moins de 2 minutes ? Oui → fais-le maintenant. Non → est-ce <em>toi</em> qui dois le faire ? Non → délègue. Oui → planifie dans ton agenda ou ajoute à une de tes listes de choses à faire.
+          </p>
+        </div>
+
+        <details class="deeper">
+          <summary>Aller plus loin — Pourquoi l'arbre est non-négociable</summary>
+          <div class="deeper-body">
+            <p>
+              L'arbre de décision paraît bureaucratique. Il est en fait une protection contre
+              toi-même. Chaque fois que tu <em>reportes</em> une décision (« je verrai plus tard »),
+              tu t'engages à la prendre deux fois : une fois maintenant pour décider de reporter,
+              une fois plus tard pour décider vraiment. Appliqué à 30 items par semaine, ça fait
+              60 micro-décisions au lieu de 30.
+            </p>
+            <p>
+              La règle des 2 minutes est un cas particulier : elle exploite le fait
+              qu'organiser une tâche de 2 minutes (la noter, la classer, la replanifier) coûte
+              souvent plus que la faire. Donc si c'est faisable tout de suite et que ça dure moins
+              de 2 minutes, le calcul rationnel est : fais-le. Pas demain. Maintenant.
+            </p>
+            <p>
+              La contrainte qui fatigue au début, c'est que tu dois <em>vraiment</em> appliquer
+              l'arbre à chaque item. Pas faire semblant. Pas re-scanner ton vide cerveau en diagonale.
+              Item par item, décision par décision. Au bout de quelques jours, ça devient un réflexe.
+              Au bout de deux semaines, la clarification prend 10 minutes par jour et ton vide cerveau
+              ne grossit plus. C'est tout l'effet recherché.
+            </p>
+          </div>
+        </details>
+
+        <div class="clarif" data-clarif="m02">
+          <h3 class="quiz-title">Exercice — Applique l'arbre de décision</h3>
+          <p class="quiz-intro">
+            4 items de ton vide cerveau. Pour chacun : actionnable ou non — et quelle suite ?
+          </p>
+          <span class="question-counter" data-question-counter>Fiche 1 / 4</span>
+
+          <!-- C1 -->
+          <div class="clarif-fiche" data-fiche="c1"
+               data-ans-actionnable="actionnable" data-ans-decision="fais-maintenant">
+            <p class="fiche-text">« Contacter Benoit Naveau pour une formation Canva » — tu as son mail, tu sais exactement quoi lui dire.</p>
+            <div class="clarif-fields">
+              <div class="clarif-row" data-row="actionnable">
+                <span class="clarif-label">Cet item est</span>
+                <select class="clarif-select" data-key="actionnable">
+                  <option value="">— choisir —</option>
+                  <option value="actionnable">actionnable</option>
+                  <option value="non-actionnable">non-actionnable</option>
+                </select>
+              </div>
+              <div class="clarif-row" data-row="decision">
+                <span class="clarif-label">Donc je le</span>
+                <select class="clarif-select" data-key="decision">
+                  <option value="">— choisir —</option>
+                  <option value="fais-maintenant">fais maintenant</option>
+                  <option value="planifie">planifie</option>
+                  <option value="delegue">délègue</option>
+                  <option value="archive-reference">archive · Référence</option>
+                  <option value="archive-udp">archive · Un jour peut-être</option>
+                </select>
+              </div>
+            </div>
+            <div class="clarif-feedbacks" aria-hidden="true">
+              <span data-for="correct">Tu as son mail, tu sais quoi dire — en moins de 2 minutes. La règle GTD est absolue : fais-le.</span>
+              <span data-for="wrong-actionnable">Il y a une action nette à prendre (envoyer un mail). C'est actionnable.</span>
+              <span data-for="wrong-decision">Tu as tout ce qu'il faut. Moins de 2 minutes: fais-le maintenant.</span>
+            </div>
+            <button class="btn-pill clarif-validate">
+              <span class="btn-label">Valider cet item</span>
+              <span class="btn-icon">→</span>
+            </button>
+            <div class="feedback feedback-slot" hidden></div>
+            <button class="btn-pill next-q" hidden>
+              <span class="btn-label">Fiche suivante</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </div>
+
+          <!-- C2 -->
+          <div class="clarif-fiche" data-fiche="c2"
+               data-ans-actionnable="actionnable" data-ans-decision="planifie">
+            <p class="fiche-text">« Corriger l'interrogation sur les fake news » — environ 1h30 de travail, rendu attendu vendredi.</p>
+            <div class="clarif-fields">
+              <div class="clarif-row" data-row="actionnable">
+                <span class="clarif-label">Cet item est</span>
+                <select class="clarif-select" data-key="actionnable">
+                  <option value="">— choisir —</option>
+                  <option value="actionnable">actionnable</option>
+                  <option value="non-actionnable">non-actionnable</option>
+                </select>
+              </div>
+              <div class="clarif-row" data-row="decision">
+                <span class="clarif-label">Donc je le</span>
+                <select class="clarif-select" data-key="decision">
+                  <option value="">— choisir —</option>
+                  <option value="fais-maintenant">fais maintenant</option>
+                  <option value="planifie">planifie</option>
+                  <option value="delegue">délègue</option>
+                  <option value="archive-reference">archive · Référence</option>
+                  <option value="archive-udp">archive · Un jour peut-être</option>
+                </select>
+              </div>
+            </div>
+            <div class="clarif-feedbacks" aria-hidden="true">
+              <span data-for="correct">Actionnable, 1h30, deadline vendredi — tu bloques un créneau dans ton agenda. L'item sort de l'inbox et atterrit dans le calendrier.</span>
+              <span data-for="wrong-actionnable">Il y a un livrable clair (des copies à rendre) et une deadline. C'est actionnable.</span>
+              <span data-for="wrong-decision">1h30, c'est bien au-delà des 2 minutes. Pas de raccourci : tu planifies le créneau.</span>
+            </div>
+            <button class="btn-pill clarif-validate">
+              <span class="btn-label">Valider cet item</span>
+              <span class="btn-icon">→</span>
+            </button>
+            <div class="feedback feedback-slot" hidden></div>
+            <button class="btn-pill next-q" hidden>
+              <span class="btn-label">Fiche suivante</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </div>
+
+          <!-- C3 -->
+          <div class="clarif-fiche" data-fiche="c3"
+               data-ans-actionnable="non-actionnable" data-ans-decision="archive-udp">
+            <p class="fiche-text">« Fouiller le site de la forge des communs numériques éducatifs » — idée notée en réunion, aucune deadline, aucun projet associé.</p>
+            <div class="clarif-fields">
+              <div class="clarif-row" data-row="actionnable">
+                <span class="clarif-label">Cet item est</span>
+                <select class="clarif-select" data-key="actionnable">
+                  <option value="">— choisir —</option>
+                  <option value="actionnable">actionnable</option>
+                  <option value="non-actionnable">non-actionnable</option>
+                </select>
+              </div>
+              <div class="clarif-row" data-row="decision">
+                <span class="clarif-label">Donc je le</span>
+                <select class="clarif-select" data-key="decision">
+                  <option value="">— choisir —</option>
+                  <option value="fais-maintenant">fais maintenant</option>
+                  <option value="planifie">planifie</option>
+                  <option value="delegue">délègue</option>
+                  <option value="archive-reference">archive · Référence</option>
+                  <option value="archive-udp">archive · Un jour peut-être</option>
+                </select>
+              </div>
+            </div>
+            <div class="clarif-feedbacks" aria-hidden="true">
+              <span data-for="correct">Pas de résultat attendu, pas d'engagement, pas de deadline — non-actionnable en l'état. Tu le glisses dans Un jour peut-être pour y revenir en Weekly Review.</span>
+              <span data-for="wrong-actionnable">Pas de résultat attendu, pas d'engagement. « Fouiller » sans objectif défini n'est pas une action concrète — c'est non-actionnable en l'état.</span>
+              <span data-for="wrong-decision">Pour un item non-actionnable sans engagement, GTD dit Un jour peut-être — une réserve d'intentions à revoir chaque semaine. Référence, c'est pour les infos utiles, pas les intentions vagues.</span>
+            </div>
+            <button class="btn-pill clarif-validate">
+              <span class="btn-label">Valider cet item</span>
+              <span class="btn-icon">→</span>
+            </button>
+            <div class="feedback feedback-slot" hidden></div>
+            <button class="btn-pill next-q" hidden>
+              <span class="btn-label">Fiche suivante</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </div>
+
+          <!-- C4 -->
+          <div class="clarif-fiche" data-fiche="c4"
+               data-ans-actionnable="non-actionnable" data-ans-decision="archive-reference">
+            <p class="fiche-text">« Utiliser le site des Rochdur sur l'esprit critique » — tu l'as déjà testé, c'est une ressource pédagogique solide pour tes cours.</p>
+            <div class="clarif-fields">
+              <div class="clarif-row" data-row="actionnable">
+                <span class="clarif-label">Cet item est</span>
+                <select class="clarif-select" data-key="actionnable">
+                  <option value="">— choisir —</option>
+                  <option value="actionnable">actionnable</option>
+                  <option value="non-actionnable">non-actionnable</option>
+                </select>
+              </div>
+              <div class="clarif-row" data-row="decision">
+                <span class="clarif-label">Donc je le</span>
+                <select class="clarif-select" data-key="decision">
+                  <option value="">— choisir —</option>
+                  <option value="fais-maintenant">fais maintenant</option>
+                  <option value="planifie">planifie</option>
+                  <option value="delegue">délègue</option>
+                  <option value="archive-reference">archive · Référence</option>
+                  <option value="archive-udp">archive · Un jour peut-être</option>
+                </select>
+              </div>
+            </div>
+            <div class="clarif-feedbacks" aria-hidden="true">
+              <span data-for="correct">Tu connais déjà la ressource — rien à faire, juste à conserver. Référence : une info utile sans action associée.</span>
+              <span data-for="wrong-actionnable">Tu l'as déjà testé. Il n'y a rien à faire — juste une ressource à garder. C'est non-actionnable.</span>
+              <span data-for="wrong-decision">Tu gardes ce lien parce qu'il peut servir — pas parce que tu veux en faire quelque chose de précis. Référence, pas Un jour peut-être.</span>
+            </div>
+            <button class="btn-pill clarif-validate">
+              <span class="btn-label">Valider cet item</span>
+              <span class="btn-icon">→</span>
+            </button>
+            <div class="feedback feedback-slot" hidden></div>
+            <button class="btn-pill next-q" hidden>
+              <span class="btn-label">Terminer l'exercice</span>
+              <span class="btn-icon">✓</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="completion-banner" hidden>
+          <p class="banner-title">✅ Module Clarifier validé</p>
+          <p class="banner-text">Tu as appliqué l'arbre GTD. Au début c'est rigide — ensuite c'est libérateur.</p>
+          <button class="btn-pill" data-unlock-next="m03">
+            <span class="btn-label">Passer à Organiser</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <button class="reset-btn retry-clarif" style="margin-left: 12px;">Refaire l'exercice</button>
+        </div>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Termine le module 01 pour débloquer</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION · MODULE 03 — DIGÉRER
+         ============================================================ -->
+    <section class="section" id="m03" data-section="m03" data-state="locked">
+      <div class="section-header">
+        <span class="section-tag">Module 03</span>
+        <h2>Organiser</h2>
+        <p class="module-sub">Ranger la décision au bon endroit pour ne plus la reprendre.</p>
+      </div>
+
+      <div class="section-body">
+        <div class="presentation">
+          <p class="hook">Clarifier, c'est décider. Digérer, c'est traiter la décision pour ne plus avoir à la reprendre.</p>
+          <p>
+            Une fois qu'un item est clarifié, il va dans l'une des <strong>5 listes</strong>.
+            Pas 12. Pas une liste par projet, par contexte, par humeur du lundi. Cinq.
+            C'est la structure minimale du système — et c'est délibéré.
+          </p>
+          <p>
+            <strong>Prochaines actions</strong> · tâches concrètes à faire (outil : Todoist, Things, TickTick).<br>
+            <strong>Projets</strong> · tout ce qui demande plus d'une étape (outil : Notion, Obsidian, document texte, kanban,...).<br>
+            <strong>Calendrier</strong> · ce qui est lié à une date ou une heure précise. (outils:votre calendrier numérique préféré)<br>
+            <strong>Un jour peut-être</strong> · idées sans date d'engagement.(outil : Notion, Obsidian, document texte, kanban,...)<br>
+            <strong>Référence</strong> · info utile sans action associée. (Bases de données Notion, drive,... )<br>
+          </p>
+          <p>
+            Une précision qui change tout : une tâche ne va pas dans <em>Projets</em> parce
+            qu'elle est importante. Elle y va parce qu'elle exige plusieurs étapes.
+          </p>
+        </div>
+
+        <details class="deeper">
+          <summary>Aller plus loin — Un projet sans prochaine action est un projet mort</summary>
+          <div class="deeper-body">
+            <p>
+              Le piège classique avec la liste Projets, c'est d'y accumuler des intitulés qui
+              sonnent bien (« Refonte du cours de 2nde », « Mise en place de la veille numérique »)
+              sans jamais définir leur <em>prochaine action concrète</em>. Résultat : tu ouvres
+              la liste, tu relis les titres, tu ne sais pas par où commencer, tu fermes la liste.
+              Le projet ne bouge jamais. Personnellement, j'adore utiliser des tableaux kanban pour décomposer les projets. 
+              Si tu ne sais pas ce que c'est, je te laisse chercher...
+            </p>
+            <p>
+              Règle importante : chaque projet actif doit avoir <strong>une et une seule prochaine
+              action</strong> définie, écrite, concrète. Pas « avancer sur la refonte », mais
+              « lister les 3 compétences à garder du cours actuel ». Une action que tu peux
+              commencer <em>maintenant</em> sans avoir à re-réfléchir.
+            </p>
+            <p>
+              Autre nuance : la frontière entre Référence et Un jour peut-être est souvent
+              floue, et c'est normal. Règle opérationnelle : si tu gardes l'item parce que
+              tu veux <em>en faire quelque chose</em>, c'est "Un jour peut-être". Si tu le gardes
+              parce qu'il peut servir <em>au cas où</em>, c'est Référence.
+              Quand tu hésites vraiment, tranche — et ajuste à la revue quotidienne.
+            </p>
+          </div>
+        </details>
+
+        <div class="gestionnaire" data-gestionnaire="m03">
+          <h3 class="quiz-title">Exercice — Range dans les bonnes listes</h3>
+          <p class="quiz-intro">6 items clarifiés. Digère les en déplaçant chacun dans la bonne liste.</p>
+          <p class="gest-counter"><span data-placed>0</span> / 6 rangés</p>
+
+          <div class="gestionnaire-layout">
+
+            <!-- Listes GTD (colonne gauche) -->
+            <aside class="gtd-panel">
+              <p class="panel-title">Tes listes</p>
+              <div class="gtd-list">
+                <span class="gtd-list-name">Prochaines actions</span>
+                <ul class="gtd-list-items" data-target="prochaines-actions"></ul>
+              </div>
+              <div class="gtd-list">
+                <span class="gtd-list-name">Projets</span>
+                <ul class="gtd-list-items" data-target="projets"></ul>
+              </div>
+              <div class="gtd-list">
+                <span class="gtd-list-name">Calendrier</span>
+                <ul class="gtd-list-items" data-target="calendrier"></ul>
+              </div>
+              <div class="gtd-list">
+                <span class="gtd-list-name">Un jour peut-être</span>
+                <ul class="gtd-list-items" data-target="un-jour-peut-etre"></ul>
+              </div>
+              <div class="gtd-list">
+                <span class="gtd-list-name">Référence</span>
+                <ul class="gtd-list-items" data-target="reference"></ul>
+              </div>
+            </aside>
+
+            <!-- Inbox (colonne droite) -->
+            <div class="inbox-gtd">
+              <p class="panel-title">Vide cerveau — à digérer</p>
+
+              <div class="gtd-item" data-item="i1" data-correct="prochaines-actions"
+                   data-label="S'inscrire à la formation IA de l'Edulab"
+                   data-feedback-wrong="Action concrète, ~5 min, à faire par toi — pas de date/heure imposée. Prochaines actions.">
+                <span class="gtd-item-text"><a href="https://edu-lab.be/innovations/ai4edu/" target="_blank" rel="noopener">M'inscrire à la formation IA de l'Edulab</a> — formulaire en ligne, ~5 min, date limite connue</span>
+                <select class="gtd-move-select">
+                  <option value="">Déplacer vers…</option>
+                  <option value="prochaines-actions">Prochaines actions</option>
+                  <option value="projets">Projets</option>
+                  <option value="calendrier">Calendrier</option>
+                  <option value="un-jour-peut-etre">Un jour peut-être</option>
+                  <option value="reference">Référence</option>
+                </select>
+                <p class="gtd-item-feedback" hidden></p>
+              </div>
+
+              <div class="gtd-item" data-item="i2" data-correct="un-jour-peut-etre"
+                   data-label="Fouiller la forge des communs numériques éducatifs"
+                   data-feedback-wrong="Intention vague, aucun engagement, aucune deadline. Un jour peut-être.">
+                <span class="gtd-item-text"><a href="https://docs.forge.apps.education.fr/" target="_blank" rel="noopener">Fouiller le site de la forge des communs numériques éducatifs</a> — curiosité notée en réunion, aucune deadline</span>
+                <select class="gtd-move-select">
+                  <option value="">Déplacer vers…</option>
+                  <option value="prochaines-actions">Prochaines actions</option>
+                  <option value="projets">Projets</option>
+                  <option value="calendrier">Calendrier</option>
+                  <option value="un-jour-peut-etre">Un jour peut-être</option>
+                  <option value="reference">Référence</option>
+                </select>
+                <p class="gtd-item-feedback" hidden></p>
+              </div>
+
+              <div class="gtd-item" data-item="i3" data-correct="prochaines-actions"
+                   data-label="Corriger l'interrogation sur les fake news"
+                   data-feedback-wrong="Tâche concrète, livrable défini, deadline vendredi. Prochaines actions.">
+                <span class="gtd-item-text">Corriger l'interrogation sur les fake news — rendu attendu vendredi, ~1h30</span>
+                <select class="gtd-move-select">
+                  <option value="">Déplacer vers…</option>
+                  <option value="prochaines-actions">Prochaines actions</option>
+                  <option value="projets">Projets</option>
+                  <option value="calendrier">Calendrier</option>
+                  <option value="un-jour-peut-etre">Un jour peut-être</option>
+                  <option value="reference">Référence</option>
+                </select>
+                <p class="gtd-item-feedback" hidden></p>
+              </div>
+
+              <div class="gtd-item" data-item="i4" data-correct="reference"
+                   data-label="Site des Rochdur — esprit critique"
+                   data-feedback-wrong="Info utile sans action associée — c'est la définition de Référence.">
+                <span class="gtd-item-text"><a href="https://lesrochdur.com/kit-esprit-critique/" target="_blank" rel="noopener">Archiver le site des Rochdur sur l'esprit critique</a> — ressource utile, aucune action prévue à court terme</span>
+                <select class="gtd-move-select">
+                  <option value="">Déplacer vers…</option>
+                  <option value="prochaines-actions">Prochaines actions</option>
+                  <option value="projets">Projets</option>
+                  <option value="calendrier">Calendrier</option>
+                  <option value="un-jour-peut-etre">Un jour peut-être</option>
+                  <option value="reference">Référence</option>
+                </select>
+                <p class="gtd-item-feedback" hidden></p>
+              </div>
+
+              <div class="gtd-item" data-item="i5" data-correct="calendrier"
+                   data-label="RDV Pedagokit — vendredi 14h"
+                   data-feedback-wrong="Date et heure précises, engagement daté — Calendrier. Règle stricte d'Allen.">
+                <span class="gtd-item-text">Rendez-vous avec <a href="https://www.pedagokit.be/accueil" target="_blank" rel="noopener">Pedagokit</a> — confirmé vendredi 14h, créneau fixé</span>
+                <select class="gtd-move-select">
+                  <option value="">Déplacer vers…</option>
+                  <option value="prochaines-actions">Prochaines actions</option>
+                  <option value="projets">Projets</option>
+                  <option value="calendrier">Calendrier</option>
+                  <option value="un-jour-peut-etre">Un jour peut-être</option>
+                  <option value="reference">Référence</option>
+                </select>
+                <p class="gtd-item-feedback" hidden></p>
+              </div>
+
+              <div class="gtd-item" data-item="i6" data-correct="projets"
+                   data-label="Partenariat Pedagokit"
+                   data-feedback-wrong="Plusieurs étapes distinctes, résultat défini dans le temps — Projets.">
+                <span class="gtd-item-text">Partenariat avec <a href="https://www.pedagokit.be/accueil" target="_blank" rel="noopener">Pedagokit</a> : diagnostic de l'existant, formation de l'équipe, déploiement des outils — plusieurs étapes, plusieurs mois</span>
+                <select class="gtd-move-select">
+                  <option value="">Déplacer vers…</option>
+                  <option value="prochaines-actions">Prochaines actions</option>
+                  <option value="projets">Projets</option>
+                  <option value="calendrier">Calendrier</option>
+                  <option value="un-jour-peut-etre">Un jour peut-être</option>
+                  <option value="reference">Référence</option>
+                </select>
+                <p class="gtd-item-feedback" hidden></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="completion-banner" hidden>
+          <p class="banner-title">✅ Module Organiser validé</p>
+          <p class="banner-text">Les 5 listes suffisent. Résiste à la tentation d'en inventer une 6ème.</p>
+          <button class="btn-pill" data-unlock-next="m04">
+            <span class="btn-label">Passer à Réviser</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <button class="reset-btn retry-gestionnaire" style="margin-left: 12px;">Refaire l'exercice</button>
+        </div>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Termine le module 02 pour débloquer</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION · MODULE 04 — RÉVISER
+         ============================================================ -->
+    <section class="section" id="m04" data-section="m04" data-state="locked">
+      <div class="section-header">
+        <span class="section-tag">Module 04</span>
+        <h2>Réviser</h2>
+        <p class="module-sub">La revue hebdomadaire n'est pas un luxe. C'est ce qui tient le système debout.</p>
+      </div>
+
+      <div class="section-body">
+        <div class="presentation">
+          <p class="hook">Sans entretien, GTD ne se dégrade pas lentement. Il se retourne contre toi.</p>
+          <p>
+            Les items s'accumulent dans les inboxes, les projets dérivent, ta liste de prochaines
+            actions devient un cimetière de bonnes intentions. Et à un moment, tu n'ouvres plus
+            le système — parce qu'ouvrir le système te donne mauvaise conscience. (Et la mauvaise conscience, c'est mal!)
+          </p>
+          <p>
+            C'est pour ça que la <strong>revue quotidienne</strong> est une pièce importante
+            de la méthode. Une petite heure par semaine, trois objectifs :
+            <strong>vider</strong> tout ce qui est resté dans le vide cerveau depuis trop longtemps,
+            <strong>actualiser</strong> les projets et leurs prochaines actions,
+            <strong>anticiper</strong> la semaine à venir.
+          </p>
+          <p>
+            Elle ne sert pas à <em>tout faire</em>. Elle sert à <em>tout voir</em> — pour
+            pouvoir <em>choisir</em> plutôt que réagir.
+          </p>
+        </div>
+
+        <details class="deeper">
+          <summary>Aller plus loin — La revue hebdomadaire comme acte de confiance envers soi-même</summary>
+          <div class="deeper-body">
+            <p>
+              On s'imagine que la Weekly Review sert à organiser. En fait, son rôle est plus
+              subtil : elle sert à <em>restaurer la confiance</em> dans le système. Parce que
+              le cerveau numérique ne fonctionne que si tu <em>crois</em> que ton inbox et tes listes sont à jour.
+              Le jour où tu doutes, ton cerveau reprend la main — et tu repars de zéro.
+            </p>
+            <p>
+              La revue quotidienne est un rituel à protéger. Même moche, même bâclée, mieux vaut la faire
+              courte et régulière qu'ambitieuse et ratée. Voici une checklist simple :
+              digérer le vide cerveau (mail, note mobile, carnet), parcourir la liste Projets
+              et s'assurer que chaque projet actif a une prochaine action, parcourir Prochaines
+              actions pour virer ce qui est mort, parcourir « Un jour peut-être » pour ressortir
+              ce qui est devenu mûr, parcourir le calendrier à deux semaines.
+            </p>
+            <p>
+              Quand c'est fait, tu n'es pas forcément plus <em>occupé</em> — tu es plus
+              <em>clair</em>. C'est ça qui change dans la semaine qui suit.
+            </p>
+          </div>
+        </details>
+
+        <div class="wr-builder" data-wr="m04">
+          <h3 class="quiz-title">Exercice — Construis ta revue hebdomadaire idéale</h3>
+          <p class="quiz-intro">
+            10 activités ci-dessous. Sélectionne <strong>toutes celles qui font partie d'une revue hebdomadaire correcte</strong>, puis valide.
+          </p>
+
+          <ul class="wr-checklist">
+
+            <li class="wr-item"
+                data-correct="true"
+                data-feedback-missed="Étape fondamentale d'Allen : aucune capture ne doit rester non traitée en fin de semaine. Si tu ne vides pas les inboxes, elles regrossit — et ton cerveau le sait.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Digérer le vide cerveau (mail, mémos vocaux, notes mobiles)</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="false"
+                data-feedback-fp="La WR est une revue du système, pas une session de traitement. Répondre aux mails pendant la revue, c'est confondre les deux — et finir épuisé avant d'avoir révisé quoi que ce soit.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Répondre aux mails urgents reçus dans la semaine</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="true"
+                data-feedback-missed="Un projet sans prochaine action définie est un projet mort — il ne bougera jamais, car le cerveau ne sait pas par où commencer. La WR détecte et corrige ça.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Vérifier que chaque projet actif a une prochaine action définie</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="false"
+                data-feedback-fp="Planifier heure par heure, c'est du time-blocking — une pratique distincte de GTD. La WR remet le système à jour pour que tu puisses choisir librement en cours de semaine, pas pour verrouiller chaque créneau.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Planifier chaque tâche de la semaine à venir heure par heure dans le calendrier</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="true"
+                data-feedback-missed="Sans passage régulier, « Un jour peut-être » devient un cimetière d'intentions. La WR sert à repêcher ce qui est mûr — et à jeter sans culpabilité ce qui ne l'est plus.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Parcourir la liste « Un jour peut-être » pour repêcher ce qui est devenu prioritaire</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="false"
+                data-feedback-fp="La WR ne vide pas Prochaines actions — elle la nettoie. Exécuter toutes les tâches pendant la revue, c'est confondre revue et action. Tu n'auras plus de WR, juste une session de travail débordante.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Traiter (faire) toutes les tâches de la liste Prochaines actions</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="true"
+                data-feedback-missed="Les inboxes ne sont qu'une partie de la WR. Actualiser les projets, c'est ce qui empêche les titres de projet de devenir de simples vœux pieux dans une liste que tu n'oses plus ouvrir.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Actualiser la liste Projets (ajouter, fermer, mettre à jour)</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="true"
+                data-feedback-missed="Un item qui traîne 3 semaines dans Prochaines actions sans avancer n'est plus une prochaine action. La WR te force à le voir — et à décider : déplacer en « Un jour peut-être » ou supprimer.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Nettoyer la liste Prochaines actions (virer les items obsolètes ou déjà faits)</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="true"
+                data-feedback-missed="Le calendrier à 2 semaines te donne la vue d'ensemble : rendez-vous, deadlines, engagements. Sans ce regard, tu avances à l'aveugle — et tu découvres le lundi matin que tu as deux livrables le même jour.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Consulter le calendrier des 2–3 semaines à venir</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+            <li class="wr-item"
+                data-correct="true"
+                data-feedback-missed="Les délégations oubliées sont des bombes à retardement. La liste « En attente » te permet de les suivre sans les garder en tête — la WR s'assure qu'elle est à jour et que rien ne tombe entre les mailles.">
+              <button class="wr-item-btn" type="button" aria-pressed="false">
+                <span class="wr-item-check" aria-hidden="true">☐</span>
+                <span class="wr-item-text">Passer en revue les délégations en attente de réponse</span>
+              </button>
+              <p class="wr-item-feedback" hidden></p>
+            </li>
+
+          </ul>
+
+          <div class="wr-actions">
+            <button class="btn-pill wr-validate">
+              <span class="btn-label">Valider ma sélection</span>
+              <span class="btn-icon">✓</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="completion-banner" hidden>
+          <p class="banner-title">✅ Module Réviser validé</p>
+          <p class="banner-text">La revue hebdomadaire est un rituel. Mieux vaut courte et régulière que parfaite et ratée.</p>
+          <button class="btn-pill" data-unlock-next="m05">
+            <span class="btn-label">Passer à Engager</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <button class="reset-btn retry-wr" style="margin-left: 12px;">Refaire l'exercice</button>
+        </div>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Termine le module 03 pour débloquer</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION · MODULE 05 — ENGAGER
+         ============================================================ -->
+    <section class="section" id="m05" data-section="m05" data-state="locked">
+      <div class="section-header">
+        <span class="section-tag">Module 05</span>
+        <h2>Engager</h2>
+        <p class="module-sub">Choisir en confiance. Pas au hasard, pas par devoir.</p>
+      </div>
+
+      <div class="section-body">
+        <div class="presentation">
+          <p class="hook">ton cerveau numérique ne te dit pas quoi faire. Il te donne un cadre pour choisir.</p>
+          <p>
+            Ce que la méthode met en face de toi, à chaque instant où tu dois décider quelle
+            tâche attaquer, ce sont quatre critères à appliquer <em>dans l'ordre</em> :
+          </p>
+          <p>
+            <strong>1. Contexte</strong> — de quoi j'ai besoin pour faire ça ? (un laptop, un
+            téléphone, être seul, avoir du réseau…)<br>
+            <strong>2. Temps disponible</strong> — combien de minutes devant moi ?<br>
+            <strong>3. Énergie</strong> — quel est mon niveau en ce moment, vraiment ?<br>
+            <strong>4. Priorité</strong> — parmi ce qui reste après les 3 premiers filtres, qu'est-ce qui a le plus d'impact ?
+          </p>
+          <p>
+            L'ordre n'est pas décoratif. Un bon système s'adapte à ton état <em>réel</em>,
+            pas à ton état idéal où tu serais toujours en forme, concentré, avec 3 heures devant toi.
+          </p>
+          <p>
+            Cela peut paraitre un peu idiot mais n'oublie pas de célébrer intérieurement à chaque fois que quelquechose disparait
+            de ta liste de tes prochaines actions parce que tu l' as accomplie. Personnellement, j' ai un petit YOUHOU! intérieur que 
+            je déclenche au moment de faire disparaitre d'une de mes listes. Faire cela a un vrai effet émotionnel: tu te donnes un 
+            petit shoot d'hormones gratos, tu te valorises à travers tes réalisations... Ça n'a l'air de rien mais, fait de manière répétée, 
+            ça contribue au bien être. (Mais c'est toi qui vois si ça te semble trop perché ou pas!)
+          </p>
+        </div>
+
+        <details class="deeper">
+          <summary>Aller plus loin — Baumeister, volonté limitée, et pourquoi la priorité passe en dernier</summary>
+          <div class="deeper-body">
+            <p>
+              Si la priorité arrive en quatrième position et pas en première, c'est pour une
+              raison documentée. Roy Baumeister a montré en 2011 que la volonté est une ressource
+              <em>limitée</em> — elle se dépense dans la journée et s'épuise. Tu le sais
+              d'ailleurs sans avoir lu Baumeister : tes choix de 18h ne ressemblent pas à tes
+              choix de 9h.
+            </p>
+            <p>
+              Un système qui te dit systématiquement « fais la tâche la plus prioritaire
+              maintenant » ignore ton état réel. Résultat : soit tu y arrives (rarement), soit
+              tu procrastines (souvent), soit tu fais semblant (le pire). Allen inverse la
+              question : <em>qu'est-ce qui est faisable dans mon état actuel</em>, et <em>parmi
+              ça</em>, qu'est-ce qui est le plus utile ?
+            </p>
+            <p>
+              C'est contre-intuitif au début. Ça peut sembler complaisant (« je choisis la
+              tâche facile parce que je suis fatigué »). C'est en fait l'inverse : tu arrêtes
+              de te mentir sur ton état, tu fais ce qui est <em>vraiment</em> faisable, et tu
+              avances réellement au lieu de rester coincé à regarder la tâche prioritaire que
+              tu n'as plus l'énergie d'attaquer. C'est aussi une manière de te respecter et de contribuer 
+              à ton estime de toi (C'est important ce truc là!)
+            </p>
+          </div>
+        </details>
+
+        <div class="pairing" data-pairing="m05">
+          <h3 class="quiz-title">Exercice — Apparie chaque tâche à son contexte optimal</h3>
+          <p class="quiz-intro">
+            Clique une tâche à gauche pour la sélectionner, puis clique le contexte qui lui correspond à droite.
+          </p>
+          <p class="pair-counter"><span data-pairs-done>0</span> / 4 paires trouvées</p>
+
+          <div class="pairing-grid">
+
+            <div class="pair-tasks">
+              <p class="pair-col-title">Tâches</p>
+
+              <div class="pair-task" data-task="t1" data-correct-ctx="bureau-concentre"
+                   data-feedback-wrong="Concentration requise + durée longue — ce n'est pas le bon contexte. Applique le critère 1 (contexte) puis 3 (énergie).">
+                <span class="pair-task-ctx"></span>
+                <span class="pair-task-label">Corriger l'interrogation sur les fake news (~1h30, concentration forte)</span>
+              </div>
+
+              <div class="pair-task" data-task="t2" data-correct-ctx="email"
+                   data-feedback-wrong="Un email de 5 min ne demande ni outil spécifique ni énergie haute. Applique le critère 1 (contexte) : de quoi as-tu besoin pour faire ça ?">
+                <span class="pair-task-ctx"></span>
+                <span class="pair-task-label">Envoyer un mail à <a href="https://www.linkedin.com/in/benoitnaveau/" target="_blank" rel="noopener">Benoit Naveau</a> pour la formation Canva (&lt; 5 min)</span>
+              </div>
+
+              <div class="pair-task" data-task="t3" data-correct-ctx="telephone"
+                   data-feedback-wrong="Cette action demande de parler à quelqu'un — ni écrit, ni travail profond. Critère 1 : quel outil est nécessaire ?">
+                <span class="pair-task-ctx"></span>
+                <span class="pair-task-label">Appeler le directeur pour confirmer la date du RDV virage numérique</span>
+              </div>
+
+              <div class="pair-task" data-task="t4" data-correct-ctx="micro-tache"
+                   data-feedback-wrong="Des items courts et peu exigeants n'ont pas besoin d'un bloc de concentration — ils appartiennent aux fenêtres courtes. Critère 2 (temps) et 3 (énergie).">
+                <span class="pair-task-ctx"></span>
+                <span class="pair-task-label">Traiter les 3 items d'inbox qui prennent chacun moins de 2 minutes</span>
+              </div>
+            </div>
+
+            <div class="pair-contexts">
+              <p class="pair-col-title">Contextes GTD</p>
+
+              <div class="pair-ctx" data-ctx="bureau-concentre"
+                   data-label="@bureau-concentré"
+                   data-feedback-correct="Concentration forte + durée longue = bloc dédié, sans interruption. C'est la seule fenêtre où une correction de copies peut aboutir sans être bâclée.">
+                <span class="pair-ctx-icon">🖥</span>
+                <span class="pair-ctx-label">@bureau-concentré</span>
+                <span class="pair-ctx-desc">Seul, sans interruption, énergie haute</span>
+              </div>
+
+              <div class="pair-ctx" data-ctx="email"
+                   data-label="@email"
+                   data-feedback-correct="Laptop ou mobile, quelques minutes, énergie basse acceptée. Le contexte @email regroupe toutes les actions courtes par écrit — efficace à n'importe quel niveau d'énergie.">
+                <span class="pair-ctx-icon">✉</span>
+                <span class="pair-ctx-label">@email</span>
+                <span class="pair-ctx-desc">Accès mail, quelques minutes</span>
+              </div>
+
+              <div class="pair-ctx" data-ctx="telephone"
+                   data-label="@téléphone"
+                   data-feedback-correct="Une action qui demande de parler à quelqu'un. Regrouper tous les appels dans @téléphone évite les bascules constantes entre modes de travail — et te permet de rappeler d'une traite.">
+                <span class="pair-ctx-icon">📞</span>
+                <span class="pair-ctx-label">@téléphone</span>
+                <span class="pair-ctx-desc">Appel possible, endroit calme</span>
+              </div>
+
+              <div class="pair-ctx" data-ctx="micro-tache"
+                   data-label="@micro-tâche"
+                   data-feedback-correct="Actions courtes, énergie basse acceptée, n'importe quel appareil. Idéal pour les fenêtres de 5–15 min entre deux cours — exactement ce que GTD appelle les créneaux de basse intensité.">
+                <span class="pair-ctx-icon">⚡</span>
+                <span class="pair-ctx-label">@micro-tâche</span>
+                <span class="pair-ctx-desc">&lt; 5 min, énergie basse acceptée</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pairing-feedback" hidden></div>
+        </div>
+
+        <div class="completion-banner" hidden>
+          <p class="banner-title">✅ Module Engager validé</p>
+          <p class="banner-text">Tu as maintenant les 5 étapes de la méthode. Reste la partie la plus intéressante : la tester sur <em>ton</em> quotidien.</p>
+          <button class="btn-pill" data-unlock-next="conclusion">
+            <span class="btn-label">Voir la conclusion</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <button class="reset-btn retry-pairing" style="margin-left: 12px;">Refaire l'exercice</button>
+        </div>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Termine le module 04 pour débloquer</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION · CONCLUSION
+         ============================================================ -->
+    <section class="section conclusion" id="conclusion" data-section="conclusion" data-state="locked">
+      <div class="section-header">
+        <span class="section-tag">Conclusion</span>
+        <h2>Et maintenant ?</h2>
+      </div>
+
+      <div class="section-body">
+        <div class="presentation">
+          <h3 style="color: var(--retro-teal); font-size: 20px; margin-top: 0;">Phase 1 · Tester la méthode telle quelle (2 semaines)</h3>
+          <p>
+            Avant d'adapter, comprendre. Je te recommande de tester un cerveau numérique dans sa forme
+            la plus orthodoxe avant de l'aménager — parce que les frictions que tu ressentiras
+            au début sont souvent des révélateurs de tes habitudes, pas des défauts de la méthode.
+          </p>
+          <p>
+            L'engagement minimal pour 2 semaines est volontairement court : <strong>un vide cerveau
+            unique</strong> pour toutes tes captures (choisis ton outils), <strong>10 minutes par jour</strong> pour clarifier ce qui est
+            entré, <strong>une revue hebdomadaire que tu fixes un jour de la semaine</strong> — même incomplète, même courte.
+          </p>
+          <p>
+            L'objectif n'est pas la perfection. C'est l'observation. Qu'est-ce qui résiste ?
+            Qu'est-ce qui soulage immédiatement ? Où le système craque — et pourquoi ?
+          </p>
+
+          <div class="ornament">❧ ✿ ❀</div>
+
+          <h3 style="color: var(--retro-teal); font-size: 20px;">Phase 2 · Adapter à ta réalité</h3>
+          <p>
+            Le cerveau numérique est un cadre, pas un dogme. Tiago Forte l'a bien montré dans <em>Building a
+            Second Brain</em> (2022) : l'hybridation et la simplification du système permettent
+            de l'intégrer durablement dans des pratiques numériques réelles — et dans une vie
+            réelle, avec ses irrégularités.
+          </p>
+          <p>
+            Après tes deux semaines, l'adaptation peut porter sur plusieurs axes : réduire
+            les 5 listes à 3 si certaines restent vides, intégrer ton cerveau numérique dans un outil que tu
+            utilises déjà plutôt que d'en installer un nouveau, ajuster la fréquence de revue.
+          </p>
+          <p>
+            Ce qui ne s'adapte pas, par contre : la capture systématique, la clarification
+            de chaque item, la revue régulière. Ce sont les trois invariants. Les supprimer,
+            c'est rater le coche — et revenir au chaos initial six semaines plus tard.
+          </p>
+
+          <div class="ornament">❧ ✿ ❀</div>
+
+          <h3 style="color: var(--retro-teal); font-size: 20px;">Boîte à outils numérique</h3>
+          <p style="font-style: italic; color: var(--retro-teal);">
+            Règle pour choisir : le système le plus simple que tu utiliseras <em>vraiment</em>
+            bat le système parfait que tu abandonneras.
+          </p>
+
+          <table class="tools-table">
+            <thead>
+              <tr>
+                <th>Étape</th>
+                <th>Outil</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Capturer</strong></td>
+                <td>Boîte mail · Notion · Obsidian</td>
+                <td>Inbox texte rapide</td>
+              </tr>
+              <tr>
+                <td><strong>Capturer (mobile)</strong></td>
+                <td>Google Keep · Apple Notes</td>
+                <td>Capture < 5 sec en déplacement</td>
+              </tr>
+              <tr>
+                <td><strong>Clarifier / Digérer</strong></td>
+                <td>Todoist · TickTick · Microsoft To Do · tableaux kanban</td>
+                <td>Prochaines actions, projets, délégation</td>
+              </tr>
+              <tr>
+                <td><strong>Calendrier</strong></td>
+                <td>Google Calendar · Outlook · Calendrier Notion</td>
+                <td>Engagements datés uniquement</td>
+              </tr>
+              <tr>
+                <td><strong>Référence</strong></td>
+                <td>Notion · Obsidian · Drive</td>
+                <td>Ressources sans action associée</td>
+              </tr>
+              <tr>
+                <td><strong>Weekly Review</strong></td>
+                <td>Template Notion / Obsidian</td>
+                <td>Checklist hebdomadaire</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            Pour démarrer sans réfléchir trop longtemps : <strong>Google Keep</strong> comme
+            vide cerveau, <strong>Todoist</strong> pour les prochaines actions, <strong>Google
+            Calendar</strong> pour les dates. Trois outils. Pas plus.
+          </p>
+        </div>
+
+        <div class="section-footer">
+          <p style="margin:0; font-size:13px; color:var(--retro-teal); font-style:italic;">
+            Références : Allen (2001) · Zeigarnik (1927) · Baumeister (2011) · Dehaene (2018) · Sweller (1988) · Toffler (1970) · Forte (2022)
+          </p>
+          <button class="btn-pill" data-unlock-next="final" data-completes-self="conclusion">
+            <span class="btn-label">Voir le bilan</span>
+            <span class="btn-icon">★</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Termine le module 05 pour débloquer</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION · FINAL — FÉLICITATIONS
+         ============================================================ -->
+    <section class="section final" id="final" data-section="final" data-state="locked">
+      <div class="section-header" style="text-align: center;">
+        <span class="section-tag">Bilan</span>
+        <h2>Bravo.</h2>
+      </div>
+
+      <div class="section-body">
+        <p style="font-size: 19px; line-height: 1.6;">
+          Tu viens de parcourir les 5 étapes pour t'aider à comprendre comment créer ton cerveau numérique.
+          Aucune n'est compliquée à comprendre. Les mettre en oeuvre est aussi simple.
+        </p>
+
+        <div class="final-recap">
+          <div class="step">
+            <span class="step-number">01</span>
+            <div>
+              <span class="step-label">Capturer</span>
+              <span class="step-note">Un vide cerveau unique. Capture en moins de 5 secondes. Ton cerveau est libéré d'en être le gardien.</span>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">02</span>
+            <div>
+              <span class="step-label">Clarifier</span>
+              <span class="step-note">L'arbre de décision, pour chaque item, sans tricher. Actionnable ou pas. < 2 min ou pas. Point.</span>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">03</span>
+            <div>
+              <span class="step-label">Digérer</span>
+              <span class="step-note">5 listes, pas 12. Et chaque projet actif a une prochaine action concrète définie.</span>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">04</span>
+            <div>
+              <span class="step-label">Réviser</span>
+              <span class="step-note">Revue hebdomadaire, non-négociable. Vider, actualiser, anticiper.</span>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">05</span>
+            <div>
+              <span class="step-label">Engager</span>
+              <span class="step-note">Contexte, temps, énergie, priorité — dans cet ordre. Pas l'inverse.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <p style="margin: 0 0 12px; font-family: var(--font-title); text-transform: uppercase; letter-spacing: 0.1em; font-size: 15px; color: var(--retro-jaune);">
+            Maintenant, la partie intéressante commence.
+          </p>
+          <p style="margin: 0 0 12px;">
+            À partir d'aujourd'hui, <strong>teste la méthode telle quelle pendant 2 semaines</strong>.
+            Une inbox unique (ta boîte mail suffit). Dix minutes par jour pour clarifier.
+            Une Weekly Review vendredi — même moche, même courte.
+          </p>
+          <p style="margin: 0;">
+            Pas d'adaptation prématurée. Pas de nouvel outil à installer. Juste la méthode,
+            deux semaines, pour observer ce qui résiste et ce qui soulage. <strong>On en
+            reparle ensuite.</strong>
+          </p>
+        </div>
+
+        <div class="ornament" style="margin-top: 40px;">❧ ✿ ❀</div>
+
+        <p style="text-align: center; font-style: italic; color: var(--retro-teal); margin-top: 24px;">
+          Ton cerveau est un processeur.<br>
+          Pas un entrepôt.
+        </p>
+      </div>
+
+      <div class="lock-banner">
+        <span class="lock-icon">🔒</span>
+        <span>Termine la conclusion pour débloquer</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="page-footer">
+      <p>Cerveau numérique — Mini-formation · <a href="https://www.linkedin.com/in/antonin-bareau" target="_blank" rel="noopener">Antonin Bareau</a> · 2026</p>
+      <button class="reset-btn" data-reset>Réinitialiser tout le parcours</button>
+    </footer>
+
+  </div><!-- /.page-frame -->
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
