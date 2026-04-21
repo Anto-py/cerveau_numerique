@@ -754,6 +754,15 @@
   // Pairing — M05 : appariement tâche ↔ contexte (clic-clic)
   // ----------------------------------------------------------
 
+  function shuffleChildren(container) {
+    var children = Array.from(container.children);
+    for (var i = children.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      container.appendChild(children[j]);
+      children.splice(j, 1);
+    }
+  }
+
   function initPairing(pairing) {
     var moduleId   = pairing.dataset.pairing;
     var tasks      = Array.from(pairing.querySelectorAll('.pair-task'));
@@ -762,6 +771,13 @@
     var feedbackEl = pairing.querySelector('.pairing-feedback');
     var selected   = null; // tâche actuellement sélectionnée
     var pairsDone  = 0;
+
+    // Mélange initial des contextes (colonne droite)
+    var ctxContainer = pairing.querySelector('.pair-contexts');
+    var ctxTitle = ctxContainer ? ctxContainer.querySelector('.pair-col-title') : null;
+    if (ctxContainer) shuffleChildren(ctxContainer);
+    // Remet le titre en premier après le mélange
+    if (ctxTitle && ctxContainer) ctxContainer.insertBefore(ctxTitle, ctxContainer.firstChild);
 
     function updateCounter() {
       if (counterEl) counterEl.textContent = pairsDone;
@@ -842,6 +858,9 @@
         ctx.dataset.state = '';
         ctx.classList.remove('is-shaking');
       });
+      // Re-mélange les contextes à chaque retry
+      if (ctxContainer) shuffleChildren(ctxContainer);
+      if (ctxTitle && ctxContainer) ctxContainer.insertBefore(ctxTitle, ctxContainer.firstChild);
       selected  = null;
       pairsDone = 0;
       updateCounter();
